@@ -34,16 +34,23 @@ console.log(numeroCasuale());
 */
 console.log("esercizio 3");
 const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const pari = numeri.filter((numeri) => numeri % 2 === 0);
+const pari = numeri.filter((numero) => numero % 2 === 0);
 console.log(pari);
+
+const pari2 = numeri.filter(function (numero) {
+  const resto = numero % 2;
+  const paroODisparo = resto === 0;
+  return paroODisparo;
+});
+console.log(pari2);
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 console.log("esercizio 4");
-sommaTot = pari.forEach(function (pari) {
+sommaTot = pari.forEach(function (element) {
   let somma = 0;
-  somma = pari + somma;
+  somma = element + somma;
   return somma;
 });
 console.log(sommaTot);
@@ -82,10 +89,11 @@ console.log(lunghezzaStringa);
 
 console.log("Esercizio 8");
 let dispari = [];
-for (let index = 1; index <= 100; index + 2) {
-  /*   dispari.push(index); */
+/* for (let index = 1; index <= 100; index + 2) {
+  dispari.push(index);
   console.log(index);
-}
+} */
+
 /* console.log(dispari); */
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
