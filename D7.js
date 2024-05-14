@@ -221,23 +221,24 @@ const movies = [
 
 console.log("Esercizio 9");
 
-movies.forEach(oldFilm);
-function oldFilm(element) {
-  let result = { Year: "2050" };
-  if (result.Year > element) {
-    result.Year = element;
-    console.log(result.Year);
-  }
-  return result.Year;
+function trovaFilmPiuVecchio(moviesArray) {
+  let filmPiuVecchio = { Year: "2100" };
+  moviesArray.forEach(function (film) {
+    if (parseInt(film.Year) < parseInt(filmPiuVecchio.Year)) {
+      filmPiuVecchio = film;
+    }
+  });
+  return filmPiuVecchio;
 }
-console.log(oldFilm(movies.Year));
+
+console.log(trovaFilmPiuVecchio(movies));
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 console.log("Esercizion 10");
 function quantiFilmCiSono(moviesArray) {
-  let numeroDiFilm = moviesArray.length();
+  let numeroDiFilm = moviesArray.length;
   return numeroDiFilm;
 }
 console.log(quantiFilmCiSono(movies));
