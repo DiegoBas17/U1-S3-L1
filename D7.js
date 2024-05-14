@@ -88,13 +88,16 @@ console.log(lunghezzaStringa);
 */
 
 console.log("Esercizio 8");
-let dispari = [];
-/* for (let index = 1; index <= 100; index + 2) {
-  dispari.push(index);
-  console.log(index);
-} */
-
-/* console.log(dispari); */
+function arrayDispari() {
+  const numeriDispari = [];
+  for (let index = 0; index < 100; index++) {
+    if (index % 2 !== 0) {
+      numeriDispari.push(index);
+    }
+  }
+  return numeriDispari;
+}
+console.log(arrayDispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -216,9 +219,28 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
+console.log("Esercizio 9");
+
+movies.forEach(oldFilm);
+function oldFilm(element) {
+  let result = { Year: "2050" };
+  if (result.Year > element) {
+    result.Year = element;
+    console.log(result.Year);
+  }
+  return result.Year;
+}
+console.log(oldFilm(movies.Year));
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+console.log("Esercizion 10");
+function quantiFilmCiSono(moviesArray) {
+  let numeroDiFilm = moviesArray.length();
+  return numeroDiFilm;
+}
+console.log(quantiFilmCiSono(movies));
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
